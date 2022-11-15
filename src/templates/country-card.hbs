@@ -1,8 +1,10 @@
 <div class='country'>
-  <h1><img src='{{flags.svg}}' width='30' /> {{name.official}}</h1>
-  <p class='info'><strong>Capital: </strong>{{capital}}</p>
-  <p class='info'><strong>Population: </strong> {{population}}</p>
-  <p class='info'><strong>Languages: </strong>
-    {{#each languages}} {{this}} {{/each}}</p>
+  <h2 class="country-title"><img src='{{flags.svg}}' width='30' /> {{name.official}}</h2>
+  <div class='info'>
+    <p class="info-item"><strong>Capital: </strong>{{capital}}</p>
+    <p class="info-item"><strong>Population: </strong> {{population}}</p>
+    <p class="info-item"><strong>Languages: </strong>
+      {{#each languages}} {{this}} {{/each}}</p>
+  </div>
 
 </div>

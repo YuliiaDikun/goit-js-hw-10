@@ -13,6 +13,11 @@ const refs = {
 refs.inputEl.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(e) {
+  if (!e.target.value) {
+    refs.ulEl.innerHTML = '';
+    refs.divInfo.innerHTML = '';
+    return;
+  }
   const searchCountry = e.target.value.trim();
   API.fetchCountryByName(searchCountry).then(countryMarkUp).catch(onFetchError);
 }
