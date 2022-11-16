@@ -25,13 +25,13 @@ function onInput(e) {
 }
 
 function onFetchError(error) {
+  console.log(error);
   Notiflix.Notify.warning('Oops, there is no country with that name');
 }
 function countryMarkUp(counrtyArr) {
   refs.ulEl.innerHTML = '';
   refs.divInfo.innerHTML = '';
   if (counrtyArr.length > 10) {
-    console.log('Too many matches found. Please enter a more specific name.');
     Notiflix.Notify.info(
       'Too many matches found. Please enter a more specific name.'
     );
